@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import CircularProgress from '@mui/material/CircularProgress';
 
+import Cards from './Card';
 import styles from './PostsComponent.module.css'; // Import the CSS module
 
 function PostsComponent() {
@@ -56,6 +57,9 @@ function PostsComponent() {
 
   return (
     <Container> 
+        <Container maxWidth="md">
+      <Cards />
+      </Container>
 <Typography 
   variant="h1" 
   component="div" 

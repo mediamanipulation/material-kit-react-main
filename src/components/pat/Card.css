@@ -1,0 +1,24 @@
+/* Designer credit: https://dribbble.com/shots/1978243-Latest-News */
+
+body, html {
+    overflow-x: hidden;
+  }
+  
+  .app-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .designer-link {
+    display:inline-block;
+    padding-top:40px;
+  }
