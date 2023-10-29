@@ -56,7 +56,19 @@ const PostsData = [
       "title": "React and the WP-API",
       "text": "The first ever decoupled starter theme for React & the WP-API",
       "image": "https://source.unsplash.com/user/ilyapavlov/600x400"
-    }
+    },
+    {
+        "category": "Travel",
+        "title": "Nomad Lifestyle",
+        "text": "Learn our tips and tricks on living a nomadic lifestyle",
+        "image": "https://source.unsplash.com/user/_vickyreyes/600x400"
+      },
+      {
+        "category": "Development",
+        "title": "React and the WP-API",
+        "text": "The first ever decoupled starter theme for React & the WP-API",
+        "image": "https://source.unsplash.com/user/ilyapavlov/600x400"
+      }
   ]
   
   
@@ -90,7 +102,7 @@ const PostsData = [
   // Post card component
   const PostCard = ({ details }) => (
     <MuiCard className="card">
-      <CardHeader category={details.category} image={details.image} />
+      <CardHeader category={details.category} image={details.image} title={details.title} />
       <CardBody title={details.title} text={details.text} />
     </MuiCard>
   );
@@ -105,21 +117,27 @@ const PostsData = [
   };
   
   // Card header component
-  const CardHeader = ({ image, category }) => (
-    <CardMedia component="img" alt={category} height="140" image={image} />
+  const CardHeader = ({ image, category, title }) => (
+    <div className="card-header">
+      <CardMedia component="img" alt={category} height="140" image={image} />
+      <div className="overlay">
+        <Typography variant="h5" component="h2" className="title">
+          {title}
+        </Typography>
+      </div>
+    </div>
   );
   
   CardHeader.propTypes = {
     image: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
   
+  
   // Card body component
-  const CardBody = ({ title, text }) => (
+  const CardBody = ({  text }) => (
     <CardContent>
-      <Typography variant="h5" component="h2">
-        {title}
-      </Typography>
       <Typography variant="body2" color="textSecondary" component="p">
         {text}
       </Typography>
@@ -127,7 +145,6 @@ const PostsData = [
   );
   
   CardBody.propTypes = {
-    title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   };
   
