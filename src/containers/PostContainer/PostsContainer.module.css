@@ -1,0 +1,42 @@
+/* PostsContainer.module.css */
+.postsContainer {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* This can be used if you have a title or a header inside your PostsContainer */
+  .header {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  /* If you're using a loading or error message, you may want to style them */
+  .loading {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .errorMessage {
+    color: #b00020;
+    text-align: center;
+  }
+  
+  /* You might want to style the grid items or cards specifically */
+  .card {
+    transition: box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design considerations */
+  @media (max-width: 600px) {
+    .postsContainer {
+      padding: 10px;
+    }
+  }
+  

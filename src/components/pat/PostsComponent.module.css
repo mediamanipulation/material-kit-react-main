@@ -14,5 +14,5 @@
   }
   
   .card:hover .text {
-    color: newColor; /* New color on hover */
+    color: white; /* New color on hover */
   }

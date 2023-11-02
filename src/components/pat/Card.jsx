@@ -121,7 +121,7 @@ const PostsData = [
     <div className="card-header">
       <CardMedia component="img" alt={category} height="140" image={image} />
       <div className="overlay">
-        <Typography variant="h5" component="h2" className="title">
+        <Typography variant="h5" component="h2" className="title" align='left'>
           {title}
         </Typography>
       </div>
@@ -138,7 +138,7 @@ const PostsData = [
   // Card body component
   const CardBody = ({  text }) => (
     <CardContent>
-      <Typography variant="body2" color="textSecondary" component="p">
+      <Typography variant="body2" color="textSecondary" component="p" align="left">
         {text}
       </Typography>
     </CardContent>
